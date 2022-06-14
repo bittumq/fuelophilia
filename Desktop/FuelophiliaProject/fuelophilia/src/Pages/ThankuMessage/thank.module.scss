@@ -1,0 +1,50 @@
+.containerDiv {
+    margin: 130px;
+}
+
+.spantitle {
+    font-weight: 800;
+    font-size: 70px;
+    width: 1389px;
+    height: 108px;
+    letter-spacing: 1.72px;
+}
+
+.spanDescription {
+    margin-top: 41px;
+    margin-left: 142px;
+    font-weight: 300;
+    width: 923px;
+    height: 70px;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.spanButton {
+    font-weight: 200;
+    font-size: 42px;
+    display: flex;
+    justify-content: center;
+}
+
+.thankYou {
+    margin-top: -100px;
+    text-decoration: none;
+    font-size: 283px;
+    line-height: 166px;
+    letter-spacing: 1.59px;
+    color: #000000;
+    font-weight: bolder;
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: #ffffff;
+    -webkit-text-fill-color: #000000;
+    text-align: center;
+    cursor: initial;
+    margin: 0px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.1;
+}
