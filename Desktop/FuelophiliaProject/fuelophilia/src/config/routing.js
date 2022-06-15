@@ -11,7 +11,9 @@ import Team from '../Pages/Team';
 import Register from '../Pages/Resister'
 import Login from '../Pages/LoginpPage'
 import Order from '../Pages/Order/Index'
-import { aboutus, contactus, home, login, order, portfolio, registration, service, team, thanku } from './constants'
+import Dashboard from '../Pages/Dashboard'
+import Cart from '../Pages/Cart/Cart'
+import { aboutus, cart, contactus, dashboard, home, login, order, portfolio, registration, service, team, thanku } from './constants'
 import ThankYouMessage from '../Pages/ThankuMessage';
 const Routing = () => {
     return (
@@ -28,7 +30,10 @@ const Routing = () => {
                         <Route path={registration} element={<Register />} />
                         <Route path={login} element={<Login />} />
                         <Route path={order} element={<Order />} />
+                        <Route path={`${order}/:id`} element={<Order />} />
                         <Route path={thanku} element={<ThankYouMessage />} />
+                        <Route path={dashboard} element={<Dashboard />} />
+                        <Route path={cart} element={<Cart />} />
                     </Routes>
                 </Layout>
             </Router>

@@ -8,12 +8,20 @@ import './number.css'
 const Index = () => {
     const [reg, setReg] = useState([])
 
-    //const URI = 'https://mynodedbisonline.herokuapp.com/api/auth/register'
+    // const URI = 'https://mynodedbisonline.herokuapp.com/api/auth/register'
+
+    const dd = () => {
+        const getData = localStorage.getItem("user")
+        if (getData) {
+            return JSON.parse(getData)
+        }
+        else {
+            return []
+        }
+    }
 
     useEffect(() => {
         localStorage.setItem("user", JSON.stringify(reg))
-
-
     }, [reg])
     const {
         register,
@@ -33,7 +41,11 @@ const Index = () => {
         //     body: JSON.stringify({ data })
         // })
 
-        // Axios.post(URI, data)
+        // Axios.post(URI, data).then((r) => {
+        //     console.log(r);
+        // })
+
+
 
     })
     return (

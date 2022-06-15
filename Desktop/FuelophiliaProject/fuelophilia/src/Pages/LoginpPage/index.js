@@ -1,16 +1,41 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { registration } from '../../config/constants'
+import { dashboard, registration } from '../../config/constants'
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 const Index = () => {
+
+    let navigate = useNavigate();
+
+    const [first, setfirst] = useState({});
+    const [user, setuser] = useState(false)
     const {
         register,
         handleSubmit,
         formState: { errors },
     } = useForm({ mode: "all" });
 
+
+    const dd = () => {
+
+
+
+    }
+
+
     function onSubmit(data) {
-        console.log(data)
+        const getData = localStorage.getItem("user")
+
+        const ff = JSON.parse(getData).filter((ert) => {
+            if (ert.email == data.email && ert.password == data.password) {
+                sessionStorage.setItem("user", JSON.stringify(ert))
+                navigate("/order");
+
+            } else {
+                setuser(true)
+                console.log("wrong credential");
+            }
+        });
     }
     return (
         <div>
@@ -70,6 +95,9 @@ const Index = () => {
                     {/* Don't have an account? <a href="#">Register?</a> */}
                     Don't have an account? <Link to={registration}>Register?</Link>
                 </p>
+                {
+                    user ? <span style={{ color: "red" }}>check you detail</span> : ''
+                }
             </form>
 
 

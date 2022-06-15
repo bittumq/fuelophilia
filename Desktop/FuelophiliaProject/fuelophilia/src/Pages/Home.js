@@ -326,14 +326,9 @@ const Home = () => {
             <section id="faq" className="faq section-bg">
                 <div className="container" data-aos="fade-up">
                     <div className="section-title">
-                        <h2>Frequently Asked Questions</h2>
+                        <h2>FAQs</h2>
                         <p>
-                            Magnam dolores commodi suscipit. Necessitatibus
-                            eius consequatur ex aliquid fuga eum quidem. Sit
-                            sint consectetur velit. Quisquam quos quisquam
-                            cupiditate. Et nemo qui impedit suscipit alias
-                            ea. Quia fugiat sit in iste officiis commodi
-                            quidem hic quas.
+                            Do not find answers to your questions below? Please contact us.
                         </p>
                     </div>
                     <div className="faq-list">
@@ -345,8 +340,8 @@ const Home = () => {
                                     className="collapse"
                                     data-bs-target="#faq-list-1"
                                 >
-                                    Non consectetur a erat nam at lectus
-                                    urna duis?{" "}
+                                    What is Fuelophilia?
+                                    {" "}
                                     <i className="bx bx-chevron-down icon-show" />
                                     <i className="bx bx-chevron-up icon-close" />
                                 </a>
@@ -356,12 +351,7 @@ const Home = () => {
                                     data-bs-parent=".faq-list"
                                 >
                                     <p>
-                                        Feugiat pretium nibh ipsum
-                                        consequat. Tempus iaculis urna id
-                                        volutpat lacus laoreet non curabitur
-                                        gravida. Venenatis lectus magna
-                                        fringilla urna porttitor rhoncus
-                                        dolor purus non.
+                                        Fuelophilia is an online platform to provide doorstep delivery of fuel in a safe, reliable, and efficient way. You can place your order online and get fuel delivered at your location in specialized Refuellers (FuelBuddy Tankers) according to your chosen schedule. We are making refueling smarter!
                                     </p>
                                 </div>
                             </li>
@@ -372,8 +362,8 @@ const Home = () => {
                                     data-bs-target="#faq-list-2"
                                     className="collapsed"
                                 >
-                                    Feugiat scelerisque varius morbi enim
-                                    nunc?{" "}
+                                    Which areas are being served
+                                    by Fuelophilia right now?{" "}
                                     <i className="bx bx-chevron-down icon-show" />
                                     <i className="bx bx-chevron-up icon-close" />
                                 </a>
@@ -383,15 +373,7 @@ const Home = () => {
                                     data-bs-parent=".faq-list"
                                 >
                                     <p>
-                                        Dolor sit amet consectetur
-                                        adipiscing elit pellentesque
-                                        habitant morbi. Id interdum velit
-                                        laoreet id donec ultrices. Fringilla
-                                        phasellus faucibus scelerisque
-                                        eleifend donec pretium. Est
-                                        pellentesque elit ullamcorper
-                                        dignissim. Mauris ultrices eros in
-                                        cursus turpis massa tincidunt dui.
+                                        Our services are available in Jaipur, Hyderabad, Delhi-NCR, Chennai, Kolkata, Pune, Navi Mumbai, Thane, Ahmedabad, Nasik, Lucknow, Kanpur and a number of other tier 2 cites across India at present.
                                     </p>
                                 </div>
                             </li>
@@ -402,8 +384,8 @@ const Home = () => {
                                     data-bs-target="#faq-list-3"
                                     className="collapsed"
                                 >
-                                    Dolor sit amet consectetur adipiscing
-                                    elit?{" "}
+                                    Where does Fuelophilia source its fuel from
+                                    ?{" "}
                                     <i className="bx bx-chevron-down icon-show" />
                                     <i className="bx bx-chevron-up icon-close" />
                                 </a>
@@ -413,16 +395,7 @@ const Home = () => {
                                     data-bs-parent=".faq-list"
                                 >
                                     <p>
-                                        Eleifend mi in nulla posuere
-                                        sollicitudin aliquam ultrices
-                                        sagittis orci. Faucibus pulvinar
-                                        elementum integer enim. Sem nulla
-                                        pharetra diam sit amet nisl
-                                        suscipit. Rutrum tellus pellentesque
-                                        eu tincidunt. Lectus urna duis
-                                        convallis convallis tellus. Urna
-                                        molestie at elementum eu facilisis
-                                        sed odio morbi quis
+                                        Fuelophilia sources fuel from authorized and selected dealers of oil companies near your location. We follow a strict quality assurance program to ensure every drop of fuel is checked for quality before it gets loaded into our Refuellers for delivery. We do not purchase or stock fuel prior to delivery. Fuel is sourced only upon receiving orders from customers.
                                     </p>
                                 </div>
                             </li>
@@ -433,8 +406,8 @@ const Home = () => {
                                     data-bs-target="#faq-list-4"
                                     className="collapsed"
                                 >
-                                    Tempus quam pellentesque nec nam aliquam
-                                    sem et tortor consequat?{" "}
+                                    What are Fuelophilia's hours of operation
+                                    ?{" "}
                                     <i className="bx bx-chevron-down icon-show" />
                                     <i className="bx bx-chevron-up icon-close" />
                                 </a>
@@ -444,14 +417,7 @@ const Home = () => {
                                     data-bs-parent=".faq-list"
                                 >
                                     <p>
-                                        Molestie a iaculis at erat
-                                        pellentesque adipiscing commodo.
-                                        Dignissim suspendisse in est ante
-                                        in. Nunc vel risus commodo viverra
-                                        maecenas accumsan. Sit amet nisl
-                                        suscipit adipiscing bibendum est.
-                                        Purus gravida quis blandit turpis
-                                        cursus in.
+                                        Our vehicles operate and provide deliveries 24x7 round the clock.
                                     </p>
                                 </div>
                             </li>
@@ -462,9 +428,8 @@ const Home = () => {
                                     data-bs-target="#faq-list-5"
                                     className="collapsed"
                                 >
-                                    Tortor vitae purus faucibus ornare.
-                                    Varius vel pharetra vel turpis nunc eget
-                                    lorem dolor?{" "}
+                                    What is Express Delivery
+                                    ?{" "}
                                     <i className="bx bx-chevron-down icon-show" />
                                     <i className="bx bx-chevron-up icon-close" />
                                 </a>
@@ -474,13 +439,9 @@ const Home = () => {
                                     data-bs-parent=".faq-list"
                                 >
                                     <p>
-                                        Laoreet sit amet cursus sit amet
-                                        dictum sit amet justo. Mauris vitae
-                                        ultricies leo integer malesuada nunc
-                                        vel. Tincidunt eget nullam non nisi
-                                        est sit amet. Turpis nunc eget lorem
-                                        dolor sed. Ut venenatis tellus in
-                                        metus vulputate eu scelerisque.
+                                        With Express Delivery, you can book the orders in the current slot or next slot - depending on time of the booking.
+                                        The estimated delivery time for the express order is minimum 2 hours to maximum 4 hours, based on the time of order booking.
+                                        The order will be delivered within the time slot allocated at the time of order placement.
                                     </p>
                                 </div>
                             </li>

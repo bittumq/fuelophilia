@@ -29,16 +29,16 @@ const Footer = () => {
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-3 col-md-6 footer-contact">
-                                <h3>Arsha</h3>
+                                <h3>Fuelophilia</h3>
                                 <p>
                                     A108 Adam Street <br />
                                     New York, NY 535022
                                     <br />
-                                    United States <br />
+                                    Jaipur <br />
                                     <br />
                                     <strong>Phone:</strong> +1 5589 55488 55
                                     <br />
-                                    <strong>Email:</strong> info@example.com
+                                    <strong>Email:</strong> fuelophilia@gmail.com
                                     <br />
                                 </p>
                             </div>
@@ -123,7 +123,7 @@ const Footer = () => {
                     <div className="copyright">
                         © Copyright{" "}
                         <strong>
-                            <span>Arsha</span>
+                            <span>Fuelophilia</span>
                         </strong>
                         . All Rights Reserved
                     </div>
@@ -133,7 +133,7 @@ const Footer = () => {
                         {/* Licensing information: https://bootstrapmade.com/license/ */}
                         {/* Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/ */}
                         Designed by{" "}
-                        <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                        <a href="https://bootstrapmade.com/">G-37</a>
                     </div>
                 </div>
             </footer>
