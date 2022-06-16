@@ -1,12 +1,16 @@
 import React from 'react'
 import { Image } from 'react-bootstrap'
+import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { cart } from '../../config/constants'
+import { addtocart } from '../../redux/action'
 import PricingData from './PricingData'
 
 const Index = () => {
-    const { title, desc, data } = PricingData;
-
+    const { title, desc } = PricingData;
+    const { HandleCart } = useSelector((demo) => demo);
+    const dispatch = useDispatch();
+    // console.log(datademo);
     return (
         <>
             {/* ======= Pricing Section ======= */}
@@ -16,65 +20,23 @@ const Index = () => {
                         <h2>{title}</h2>
                         <p>{desc}</p>
                     </div>
-                    <div className="row">
+                    <div className="row" style={{ justifyContent: "center" }}>
                         {
-                            data?.map((item, index) => (
-
-                                <div
-                                    className="col-lg-4"
-                                    data-aos="fade-up"
-                                    data-aos-delay={100}
-                                    key={`pricing ${index}`}
-                                >
-                                    <div className="box">
-                                        <h3>{item.title}</h3>
-                                        <h4>
-                                            <sup>₹</sup>{item.price}<span>{item.per}</span>
-                                        </h4>
-
-                                        <ul>
-
-                                            <img
-                                                src="assets/img/petrol.jpg"
-                                                // className="img-fluid animated"
-                                                // alt=""
-                                                height="250px"
-                                                width="300px"
-                                            />
-                                            {/* <li>
-                                                <i className="bx bx-check" /> Quam
-                                                adipiscing vitae proin
-                                            </li>
-                                            <li>
-                                                <i className="bx bx-check" /> Nec
-                                                feugiat nisl pretium
-                                            </li>
-                                            <li>
-                                                <i className="bx bx-check" /> Nulla
-                                                at volutpat diam uteera
-                                            </li>
-                                            <li className="na">
-                                                <i className="bx bx-x" />{" "}
-                                                <span>
-                                                    Pharetra massa massa ultricies
-                                                </span>
-                                            </li>
-                                            <li className="na">
-                                                <i className="bx bx-x" />{" "}
-                                                <span>
-                                                    Massa ultricies mi quis
-                                                    hendrerit
-                                                </span>
-                                            </li> */}
-                                        </ul>
-
-                                        <Link to={`/order/${item.id}`} className="buy-btn">
+                            HandleCart?.alldata?.map((item, index) => (
+                                <div className="card" style={{ width: '18rem' }}>
+                                    <img className="card-img-top" src="assets/img/petrol.jpg" alt="Card image cap" />
+                                    <div className="card-body">
+                                        <h5 className="card-title"> {item.title}</h5>
+                                        <sup>₹</sup>{item.price}<span>{item.per}</span>
+                                    </div>
+                                    <div className="card-body">
+                                        <Link to={`/order/${item.id}`} className="buy-btn" >
                                             {item.btnText}
                                         </Link>
-                                        {/* <button className='buy-btn' onClick={() => { "/cart" }}> {item.btnText}</button> */}
-                                        {/* <Link to={`/products/${product.id}`} className="btn btn-outline-dark">Buy Now</Link> */}
+
                                     </div>
                                 </div>
+
                             ))
                         }
 

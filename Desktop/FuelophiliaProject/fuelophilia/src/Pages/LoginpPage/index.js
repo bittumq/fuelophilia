@@ -7,7 +7,7 @@ const Index = () => {
 
     let navigate = useNavigate();
 
-    const [first, setfirst] = useState({});
+
     const [user, setuser] = useState(false)
     const {
         register,
@@ -15,13 +15,8 @@ const Index = () => {
         formState: { errors },
     } = useForm({ mode: "all" });
 
-
     const dd = () => {
-
-
-
     }
-
 
     function onSubmit(data) {
         const getData = localStorage.getItem("user")

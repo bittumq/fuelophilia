@@ -1,14 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { FaThemeco } from 'react-icons/fa'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { login } from '../../config/constants'
 import Axios from 'axios'
 import './number.css'
 const Index = () => {
-    const [reg, setReg] = useState([])
-
-    // const URI = 'https://mynodedbisonline.herokuapp.com/api/auth/register'
 
     const dd = () => {
         const getData = localStorage.getItem("user")
@@ -20,9 +17,15 @@ const Index = () => {
         }
     }
 
+    const [reg, setReg] = useState(dd)
+    const [alreadyUser, SetalreadyUser] = useState(false)
+    let navigate = useNavigate();
+
     useEffect(() => {
         localStorage.setItem("user", JSON.stringify(reg))
+        sessionStorage.setItem("user", JSON.stringify(reg))
     }, [reg])
+
     const {
         register,
         handleSubmit,
@@ -31,19 +34,24 @@ const Index = () => {
 
     const onSubmit = ((data) => {
 
+        const getData = localStorage.getItem("user")
+
+        JSON.parse(getData).filter((item) => {
+            if (item.email == data.email) {
+                // sessionStorage.setItem("user", JSON.stringify(ert))
+                // navigate("/order");
+                alert("user already register")
+
+            } else {
+                SetalreadyUser(true)
+                console.log("wrong credential");
+            }
+        });
         setReg([...reg, data])
 
-        // fetch(URI, {
-        //     method: "POST",
-        //     headers: {
-        //         "content-Type": "application/json",
-        //     },
-        //     body: JSON.stringify({ data })
-        // })
-
-        // Axios.post(URI, data).then((r) => {
-        //     console.log(r);
-        // })
+        setTimeout(() => {
+            navigate("/login")
+        });
 
 
 
@@ -52,74 +60,9 @@ const Index = () => {
         <>
             <div>
 
-                {/* <form
-                className="php-email-form"
-                onSubmit={handleSubmit(onSubmit)}
-            >
-                <div className="row">
-                    <div className="form-group col-md-6">
-
-                        <input
-                            type="text"
-                            name="name"
-                            className="form-control"
-                            id="name"
-                            placeholder='Please Enter Name'
-                            {...register('name', { required: { value: true, message: "This Field Is Required" } })}
-                        />
-                    </div>
-                    <div className="form-group col-md-6">
-
-                        <input
-                            type="email"
-                            className="form-control"
-                            name="email"
-                            id="email"
-                            placeholder='Plase Enter Email'
-                            {...register('email', { required: { value: true, message: "This Field Is Required" } })}
-                        />
-                    </div>
-                </div>
-                <div className="form-group">
-                    <label htmlFor="name">Subject</label>
-                    <input
-                        type="text"
-                        className="form-control"
-                        name="subject"
-                        id="subject"
-                        placeholder='Plase Enter Subjet'
-                        {...register('subject', { required: { value: true, message: "This Field Is Required" } })}
-                    />
-                </div>
-                <div className="form-group">
-
-                    <textarea
-                        className="form-control"
-                        name="message"
-                        rows={10}
-                        defaultValue={""}
-                        placeholder="Plase Enter Message"
-                        {...register('message', { required: { value: true, message: "This Field Is Required" } })}
-                    />
-                </div>
-                <div className="my-3">
-                    <div className="loading">Loading</div>
-                    <div className="error-message" />
-                    <div className="sent-message">
-                        Your message has been sent. Thank
-                        you!
-                    </div>
-                </div>
-                <div className="text-center">
-                    <button type="submit">
-                        Create
-                    </button>
-                </div>
-            </form> */}
-
                 <form onSubmit={handleSubmit(onSubmit)} style={{ marginLeft: "600px", display: "flex", justifyContent: "center", flexDirection: "column", marginTop: "100px", width: "600px", }}>
                     <h3>Sign Up</h3>
-                    {/* <div className="mb-3">
+                    <div className="mb-3">
                         <input
                             type="text"
                             className="form-control"
@@ -127,8 +70,8 @@ const Index = () => {
                             {...register('name', { required: { value: true, message: "This Field Is Required" } })}
                         />
                         <span style={{ color: "red" }}> {errors.name?.type === "required" && errors.name.message} </span>
-                    </div> */}
-
+                    </div>
+                    {/* 
                     <div className="mb-3">
                         <input
                             type="text"
@@ -137,15 +80,15 @@ const Index = () => {
                             {...register('username', { required: { value: true, message: "This Field Is Required" } })}
                         />
                         <span style={{ color: "red" }}> {errors.name?.type === "required" && errors.name.message} </span>
-                    </div>
+                    </div> */}
 
 
-                    {/* <div className="mb-3">
+                    <div className="mb-3">
                         <input type="text" className="form-control" placeholder="Last name"
                             {...register('lastname', { required: { value: true, message: "This Field Is Required" } })}
                         />
                         <span style={{ color: "red" }}> {errors.lastname?.type === "required" && errors.lastname.message} </span>
-                    </div> */}
+                    </div>
                     <div className="mb-3">
                         <input
                             type="email"
@@ -157,7 +100,7 @@ const Index = () => {
                         <span style={{ color: "red" }}>{errors.email?.type === "required" && errors.email.message}</span>
                         <span style={{ color: "red" }}>{errors.email?.type === "pattern" && errors.email.message}</span>
                     </div>
-                    {/* <div className="mb-3">
+                    <div className="mb-3">
 
                         <input
                             type="number"
@@ -168,7 +111,7 @@ const Index = () => {
                         <span style={{ color: "red" }}>{errors.contact?.type === "required" && errors.contact.message}</span>
                         <span style={{ color: "red" }}>{errors.contact?.type === "minLength" && "Please enter valid number"}</span>
                         <span style={{ color: "red" }}>{errors.contact?.type === "maxLength" && "Phone number must be at least 10 numbers"}</span>
-                    </div> */}
+                    </div>
                     <div className="mb-3">
 
                         <input

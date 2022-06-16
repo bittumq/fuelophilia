@@ -1,31 +1,32 @@
 // add item to cart
 
-// export const addCart = (product) => {
-//     return{
-//         type: "ADDITEM",
-//         payload: product
-//     }
-// }
+export const addtocart = (cart) => {
+    return {
+        type: "ADDITEM",
+        payload: cart
+    }
+}
 
 /// remove to cart
 
-export const deleteCart = (product) => {
+export const deleteCart = (cart) => {
+    console.log(cart, "======================");
     return {
         type: "DELETEITEM",
-        payload: product
+        payload: cart
     }
 }
 
-export const inc = (product) => {
+export const inc = (cart) => {
     return {
         type: "INC",
-        payload: product
+        payload: cart
     }
 }
 
-export const dec = (product) => {
+export const dec = (cart) => {
     return {
         type: "DEC",
-        payload: product
+        payload: cart
     }
 }

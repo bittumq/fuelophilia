@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import {
     aboutus,
     contactus,
@@ -11,7 +11,19 @@ import {
     order
 } from "../../../config/constants";
 import { FaUserTie } from "react-icons/fa";
-function Header() {
+import Badgedata from "./Badgedata";
+function Header(data) {
+    let users = JSON.parse(localStorage.getItem('user'))
+    //console.log(users);
+    let sessionUser = JSON.parse(sessionStorage.getItem('user'))
+    //console.log(sessionUser);
+
+
+    const navigate = useNavigate();
+    function logOut() {
+        sessionStorage.clear();
+        navigate('/login')
+    }
     return (
         <>
             <header
@@ -77,13 +89,9 @@ function Header() {
                             </li>
                             <li className="dropdown">
                                 <a href="#" className="getstarted scrollto">
-                                    <FaUserTie />
+                                    {sessionUser ? <Badgedata first={sessionUser?.name.slice(0, 1)} last={sessionUser?.lastname.slice(0, 1)} /> : <FaUserTie />}
                                 </a>
                                 <ul>
-                                    {/* <li>
-                                        <a href="#">Login</a>
-                                        
-                                    </li> */}
                                     <li>
                                         <Link to={login}>Login</Link>
                                     </li>
@@ -93,9 +101,12 @@ function Header() {
                                     <li>
                                         <a href="#">Order-History</a>
                                     </li>
-                                    <li>
-                                        <a href="#">Logout</a>
+                                    {sessionStorage.getItem('user') ? <li>
+                                        <a href="#" onClick={logOut}>Logout</a>
                                     </li>
+                                        : null
+                                    }
+
                                 </ul>
                             </li>
 

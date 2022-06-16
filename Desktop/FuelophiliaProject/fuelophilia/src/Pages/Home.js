@@ -83,7 +83,9 @@ const Home = () => {
                                             className="collapse"
                                             data-bs-target="#accordion-list-1"
                                         >
-                                            <span>01</span> Manufacturing & Production?{" "}
+                                            <span style={{
+                                                transform: "rotate(270deg)"
+                                            }}>01</span> Manufacturing & Production?{" "}
                                             <i className="bx bx-chevron-down icon-show" />
                                             <i className="bx bx-chevron-up icon-close" />
                                         </a>

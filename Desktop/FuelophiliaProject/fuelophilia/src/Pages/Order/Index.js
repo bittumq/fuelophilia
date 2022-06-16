@@ -1,19 +1,16 @@
+
+
 import React, { useEffect, useState } from 'react'
-import { Col, Row } from 'react-bootstrap'
-import { useDispatch } from 'react-redux'
+import { Button, Col, Row } from 'react-bootstrap'
+import { useDispatch, useSelector } from 'react-redux'
 import { Link, useParams } from 'react-router-dom'
 import Pricing from '../../components/Pricing/Index'
 import PricingData from "../../components/Pricing/PricingData"
-import { deleteCart } from '../../redux/action'
+import { addtocart } from '../../redux/action'
+
 const Index = () => {
 
     const dispatch = useDispatch();
-    const deleteProduct = (cart) => {
-        dispatch(deleteCart(cart));
-    }
-
-
-
 
     let { id } = useParams();
     const [first, setfirst] = useState({});
@@ -25,8 +22,12 @@ const Index = () => {
             setfirst(card)
         }
     }, [id])
+    const addcart = (cart) => {
+        dispatch(addtocart(cart));
+    }
     console.log(id);
-
+    const { HandleCart } = useSelector((e) => e);
+    console.log(HandleCart?.cartdata);
     return !id ? (
         <>
             <div style={{ marginTop: "50px" }}>
@@ -41,61 +42,39 @@ const Index = () => {
 
             <div className="container" data-aos="fade-up">
                 <div className="section-title">
-                    <h2>Cart</h2>
+                    <h2>Add Item</h2>
                 </div>
                 <div style={{ display: "flex" }}>
                     <Col lg={6} style={{ marginLeft: "100px" }}>
                         <div className="row">
-                            <div className="icon-box-order">
-                                <h1>
-                                    <span>{first.title}</span>
-                                </h1>
-                                <div className="icon-order">
-                                    <h3>
-                                        <sup>₹</sup>{first.price}<span>{first.per}</span>
-                                    </h3>
+
+                            <div className="card" style={{ width: '18rem' }}>
+                                <img className="card-img-top" src="/assets/img/petrol.jpg" alt="Card image cap" />
+                                <div className="card-body">
+                                    <h5 className="card-title"> {first.title}</h5>
+                                    <sup>₹</sup>{first.price}<span>{first.per}</span>
                                 </div>
+                                <div className="card-body">
+                                    {HandleCart?.cartdata.some((e) => e.id == first?.id) ? <Link to="/cart" className='btn btn-primary'>
+                                        View Cart
+                                    </Link>
+                                        : <Button className="buy-btn " onClick={() => dispatch(addcart(first))}>
+                                            Add To Cart
+                                        </Button>
+                                    }
 
-                                <h4>
-                                    <span class="input-group-btn">
-                                        <button className="quantity-left-minus btn btn-danger btn-number"
-                                        // onClick={() => {
-                                        //     dispatch({ type: "DEC", payload: item.id });
-                                        //     //changehandle(item.id);
-                                        // }}
-                                        // disabled={item.qty == 1 ? true : false}
-                                        > <span class="glyphicon glyphicon-minus">-</span></button>
-                                    </span>
-
-
-
-                                    <span class="input-group-btn">
-                                        <button className="quantity-right-plus btn btn-success btn-number"
-                                        // onClick={() => {
-                                        //     dispatch({ type: "INC", payload: item.id });
-                                        //     // changehandle(item.id);
-                                        // }}
-                                        >
-                                            <span class="glyphicon glyphicon-plus">+</span>
-                                        </button>
-                                    </span>
-                                </h4>
-                                <p>
-                                    <button className='btn btn-primary btn-sm me-1 mb-2" data-mdb-toggle="tooltip' style={{ marginBottom: '10px', backgroundColor: 'gray' }}
-                                        onClick={() => dispatch(deleteCart(first.id))}>
-                                        Remove to Cart
-                                    </button>
-                                    {/* {first?.price} */}
-                                </p>
+                                </div>
                             </div>
+
                         </div>
 
 
                     </Col>
 
                     <Col lg={6} >
+
                         {/* next html summary */}
-                        {/* <div className="row"> */}
+
                         <div className="col-md-8">
                             <div className="card mb-4">
                                 <div className="card-header py-3">
@@ -124,21 +103,21 @@ const Index = () => {
                                             {/* <span><strong>{total}</strong></span> */}
                                         </li>
                                     </ul>
-                                    <Link to="/payment">
+                                    {/* <Link to="/payment">
                                         <button type="button" className="btn btn-primary btn-lg btn-block">
                                             Go to checkout
                                         </button>
-                                    </Link>
+                                    </Link> */}
 
                                 </div>
                             </div>
                         </div>
                     </Col>
-                </div>
-            </div>
+                </div >
+            </div >
 
 
-        </section>
+        </section >
 
 
 }

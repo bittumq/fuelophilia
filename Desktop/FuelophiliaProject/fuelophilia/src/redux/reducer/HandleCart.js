@@ -1,29 +1,44 @@
 
-const cart = []
+const cart = {
+    cartdata: [], alldata: [
+        {
+            id: 1,
+            title: "Petrol",
+            price: "120",
+            per: "/liter",
+            image: "",
+            btnText: "Order"
+        },
+        {
+            id: 2,
+            title: "Desiel",
+            price: "100",
+            per: "/liter",
+            image: "",
+            btnText: "Order"
+        },
+        {
+            id: 3,
+            title: "CNG",
+            price: "80",
+            per: "/KG",
+            image: "",
+            btnText: "Order"
+        }
+
+    ]
+}
 
 const HandleCart = (state = cart, action) => {
     //const {cart, setCart} = useContext(Cart);
+    console.log(action, "stttttttttttttttttttttt------");
     const product = action.payload;
-    console.log();
 
     switch (action.type) {
-        // case "ADDITEM":
+        case "ADDITEM":
 
-
-        //     //HECK IF PRODUCT IS ALREADY EXIST
-        //     const exist = state.find((x) => x.id === product);
-        //     //console.log(exist);
-        //     if (exist) {
-        //         return state.map((x) =>
-        //             x.id === product.id ? { ...x, qty: x.qty + 1 } : x);
-        //     }
-        //     else {
-        //         const product = action.payload;
-        //         return [
-        //             ...state, { ...product, qty: 1 }
-        //         ]
-        //     }
-
+            //HECK IF PRODUCT IS ALREADY EXIST
+            return { ...state, cartdata: [...state.cartdata, action.payload] }
         case "DELETEITEM":
             //console.log('delete');
             let demo = state.filter((e) => {
