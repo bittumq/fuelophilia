@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { BsFillCartFill } from "react-icons/bs";
 import {
     aboutus,
     contactus,
@@ -8,10 +9,13 @@ import {
     team,
     login,
     home,
-    order
+    order,
+    cart
 } from "../../../config/constants";
 import { FaUserTie } from "react-icons/fa";
 import Badgedata from "./Badgedata";
+import { useSelector } from "react-redux";
+import { Badge } from "react-bootstrap";
 function Header(data) {
     let users = JSON.parse(localStorage.getItem('user'))
     //console.log(users);
@@ -24,6 +28,7 @@ function Header(data) {
         sessionStorage.clear();
         navigate('/login')
     }
+    const { HandleCart } = useSelector((e) => e);
     return (
         <>
             <header
@@ -46,7 +51,7 @@ function Header(data) {
                                     className="nav-link scrollto"
                                 >
 
-                                    About
+                                    About us
 
                                 </Link>
                             </li>
@@ -87,14 +92,26 @@ function Header(data) {
 
                                 </Link>
                             </li>
+                            <li>
+                                <Link
+                                    to={cart}
+                                    className="nav-link scrollto"
+                                >
+
+                                    <BsFillCartFill /> <span> {HandleCart?.cartdata.length}</span>
+
+
+                                </Link>
+                            </li>
                             <li className="dropdown">
                                 <a href="#" className="getstarted scrollto">
-                                    {sessionUser ? <Badgedata first={sessionUser?.name.slice(0, 1)} last={sessionUser?.lastname.slice(0, 1)} /> : <FaUserTie />}
+                                    {sessionUser ? <Badgedata first={sessionUser?.name?.slice(0, 1)} last={sessionUser?.lastname?.slice(0, 1)} /> : <FaUserTie />}
                                 </a>
                                 <ul>
-                                    <li>
+                                    {!sessionStorage.getItem('user') ? <li>
                                         <Link to={login}>Login</Link>
-                                    </li>
+                                    </li> : null
+                                    }
                                     <li>
                                         <a href="#">Profile</a>
                                     </li>

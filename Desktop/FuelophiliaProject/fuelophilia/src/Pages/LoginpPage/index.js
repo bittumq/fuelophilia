@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { dashboard, registration } from '../../config/constants'
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
-const Index = () => {
+const Index = ({ changeroute }) => {
 
     let navigate = useNavigate();
 
@@ -17,6 +17,11 @@ const Index = () => {
 
     const dd = () => {
     }
+    useEffect(() => {
+        if (changeroute) {
+            navigate("/")
+        }
+    }, [])
 
     function onSubmit(data) {
         const getData = localStorage.getItem("user")

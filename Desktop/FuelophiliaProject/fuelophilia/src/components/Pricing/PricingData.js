@@ -5,6 +5,8 @@ const PricingData = {
     data: [
         {
             id: 1,
+            qty: 1,
+
             title: "Petrol",
             price: "120",
             per: "/liter",
@@ -12,7 +14,7 @@ const PricingData = {
             btnText: "Order"
         },
         {
-            id: 2,
+            id: 2, qty: 1,
             title: "Desiel",
             price: "100",
             per: "/liter",
@@ -20,7 +22,7 @@ const PricingData = {
             btnText: "Order"
         },
         {
-            id: 3,
+            id: 3, qty: 1,
             title: "CNG",
             price: "80",
             per: "/KG",

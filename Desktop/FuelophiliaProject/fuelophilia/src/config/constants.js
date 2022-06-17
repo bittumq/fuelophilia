@@ -9,6 +9,7 @@ export const registration = '/register-user';
 export const login = '/login';
 export const order = '/order';
 export const cart = '/cart';
+export const payment = '/payment'
 export const thanku = '/thanku';
 export const dashboard = '/dashboard'
 

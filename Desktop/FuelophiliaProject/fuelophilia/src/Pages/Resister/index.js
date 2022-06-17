@@ -3,7 +3,6 @@ import { useForm } from 'react-hook-form'
 import { FaThemeco } from 'react-icons/fa'
 import { Link, useNavigate } from 'react-router-dom'
 import { login } from '../../config/constants'
-import Axios from 'axios'
 import './number.css'
 const Index = () => {
 
@@ -51,7 +50,7 @@ const Index = () => {
 
         setTimeout(() => {
             navigate("/login")
-        });
+        }, 1000);
 
 
 

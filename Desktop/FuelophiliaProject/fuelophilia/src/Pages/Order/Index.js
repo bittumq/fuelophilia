@@ -1,5 +1,3 @@
-
-
 import React, { useEffect, useState } from 'react'
 import { Button, Col, Row } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
@@ -24,10 +22,13 @@ const Index = () => {
     }, [id])
     const addcart = (cart) => {
         dispatch(addtocart(cart));
+        // localStorage.setItem("cart", JSON.stringify(cart))
     }
-    console.log(id);
     const { HandleCart } = useSelector((e) => e);
-    console.log(HandleCart?.cartdata);
+    //console.log(HandleCart?.cartdata);
+    useEffect(() => {
+        localStorage.setItem("cart", JSON.stringify(HandleCart?.cartdata))
+    }, [HandleCart?.cartdata])
     return !id ? (
         <>
             <div style={{ marginTop: "50px" }}>

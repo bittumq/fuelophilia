@@ -167,7 +167,7 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   justify-content: space-between;
   padding: 10px 0 10px 30px;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 500;
   color: #fff;
   white-space: nowrap;
@@ -699,7 +699,7 @@ section {
   display: block;
   position: relative;
   font-family: "Poppins", sans-serif;
-  font-size: 28px;
+  font-size: 20px;
   line-height: 24px;
   font-weight: 500;
   padding-right: 30px;
@@ -710,7 +710,7 @@ section {
 .why-us .accordion-list span {
   color: #47b2e4;
   font-weight: 600;
-  font-size: 28px;
+  font-size: 20px;
   padding-right: 10px;
 
 }
@@ -1325,6 +1325,20 @@ section {
   text-decoration: line-through;
 }
 
+.increment {
+  display: inline-block;
+  padding: 6px 15px;
+  border-radius: 50px;
+  color: #47b2e4;
+  transition: none;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Jost", sans-serif;
+  transition: 0.3s;
+  border: 1px solid #47b2e4;
+}
+
+
 .pricing .buy-btn {
   display: inline-block;
   padding: 12px 35px;
@@ -1404,7 +1418,7 @@ section {
   display: block;
   position: relative;
   font-family: "Poppins", sans-serif;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 24px;
   font-weight: 500;
   padding: 0 30px;
@@ -1413,7 +1427,7 @@ section {
 }
 
 .faq .faq-list .icon-help {
-  font-size: 24px;
+  font-size: 20px;
   position: absolute;
   right: 0;
   left: 20px;

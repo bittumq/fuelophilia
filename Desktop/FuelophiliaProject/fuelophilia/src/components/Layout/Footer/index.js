@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { aboutus, home, portfolio, service } from "../../../config/constants";
 
 const Footer = () => {
     return (
@@ -31,8 +33,8 @@ const Footer = () => {
                             <div className="col-lg-3 col-md-6 footer-contact">
                                 <h3>Fuelophilia</h3>
                                 <p>
-                                    A108 Adam Street <br />
-                                    New York, NY 535022
+                                    ITS-1 & 2, IT Park, EPIP, Sitapura, – 302022  <br />
+                                    Rajasthan – INDIA
                                     <br />
                                     Jaipur <br />
                                     <br />
@@ -47,19 +49,19 @@ const Footer = () => {
                                 <ul>
                                     <li>
                                         <i className="bx bx-chevron-right" />{" "}
-                                        <a href="#">Home</a>
+                                        <Link to={home} >Home</Link>
                                     </li>
                                     <li>
                                         <i className="bx bx-chevron-right" />{" "}
-                                        <a href="#">About us</a>
+                                        <Link to={aboutus}>About us</Link>
                                     </li>
                                     <li>
                                         <i className="bx bx-chevron-right" />{" "}
-                                        <a href="#">Services</a>
+                                        <Link to={service}>Services</Link>
                                     </li>
                                     <li>
                                         <i className="bx bx-chevron-right" />{" "}
-                                        <a href="#">Terms of service</a>
+                                        <Link to={portfolio}>Portfolio</Link>
                                     </li>
                                     <li>
                                         <i className="bx bx-chevron-right" />{" "}
@@ -99,13 +101,13 @@ const Footer = () => {
                                     tierra videa magna derita valies
                                 </p>
                                 <div className="social-links mt-3">
-                                    <a href="#" className="twitter">
+                                    <a className="twitter">
                                         <i className="bx bxl-twitter" />
                                     </a>
                                     <a href="#" className="facebook">
                                         <i className="bx bxl-facebook" />
                                     </a>
-                                    <a href="#" className="instagram">
+                                    <a className="instagram">
                                         <i className="bx bxl-instagram" />
                                     </a>
                                     <a href="#" className="google-plus">

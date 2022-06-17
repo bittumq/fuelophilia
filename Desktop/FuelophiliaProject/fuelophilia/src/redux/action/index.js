@@ -9,8 +9,8 @@ export const addtocart = (cart) => {
 
 /// remove to cart
 
-export const deleteCart = (cart) => {
-    console.log(cart, "======================");
+export const deletetoCart = (cart) => {
+
     return {
         type: "DELETEITEM",
         payload: cart
