@@ -699,7 +699,7 @@ section {
   display: block;
   position: relative;
   font-family: "Poppins", sans-serif;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 24px;
   font-weight: 500;
   padding-right: 30px;
@@ -710,7 +710,7 @@ section {
 .why-us .accordion-list span {
   color: #47b2e4;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 16px;
   padding-right: 10px;
 
 }

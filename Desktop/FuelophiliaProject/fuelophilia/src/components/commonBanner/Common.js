@@ -42,8 +42,8 @@ const Common = () => {
                                 src="assets/img/tdfapp1.png"
                                 className="img-fluid animated"
                                 alt=""
-                                height="1400px"
-                                width="1400px"
+                                height="1200px"
+                                width="1200px"
                             />
                         </div>
                     </div>

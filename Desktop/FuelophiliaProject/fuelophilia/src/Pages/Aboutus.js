@@ -1,12 +1,11 @@
 import React from 'react'
-import Banner from '../components/commonBanner/Common'
 
 const Aboutus = () => {
     return (
         <div>
-            <Banner />
+          
             {/* ======= About Us Section ======= */}
-            <section id="about" className="about">
+            <section id="about" className="about" style={{marginTop: "40px"}}>
                 <div className="container" data-aos="fade-up">
                     <div className="section-title">
                         <h2>About Us</h2>
@@ -58,4 +57,4 @@ const Aboutus = () => {
     )
 }
 
-export default Aboutus
+export default Aboutus;
