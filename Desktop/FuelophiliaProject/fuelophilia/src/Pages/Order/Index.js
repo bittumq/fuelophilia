@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Button, Col, Row } from 'react-bootstrap'
+import { Button, Col} from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link, useParams } from 'react-router-dom'
 import Pricing from '../../components/Pricing/Index'
@@ -31,15 +31,12 @@ const Index = () => {
     }, [HandleCart?.cartdata])
     return !id ? (
         <>
-            <div style={{ marginTop: "50px" }}>
-
+            <div style={{ marginTop: "40px" }}>
                 <Pricing />
-
             </div>
-
         </>
     ) :
-        <section id="services" className="services section-bg" style={{ marginTop: "100px" }}>
+        <section id="services" className="services section-bg" >
 
             <div className="container" data-aos="fade-up">
                 <div className="section-title">

@@ -38,7 +38,7 @@ function Header(data) {
             >
                 <div className="container d-flex align-items-center">
                     <h1 className="logo me-auto">
-                        <Link to={home}>Fuelophilia</Link>
+                        <Link to={home}>Fuellophilia</Link>
                     </h1>
                     <nav id="navbar" className="navbar">
                         <ul>

@@ -27,7 +27,7 @@ const Cart = () => {
         dispatch(deletetoCart(id));
     }
     return (
-        <section id="pricing" className="pricing" style={{ marginTop: "150px" }}>
+        <section id="pricing" className="pricing" style={{ marginTop: "40px" }}>
             <div className="container" data-aos="fade-up">
                 <div className="section-title">
                     <h2>{title}</h2>

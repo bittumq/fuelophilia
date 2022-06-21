@@ -31,7 +31,7 @@ const Footer = () => {
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-3 col-md-6 footer-contact">
-                                <h3>Fuelophilia</h3>
+                                <h3>fuellophilia</h3>
                                 <p>
                                     ITS-1 & 2, IT Park, EPIP, Sitapura, – 302022  <br />
                                     Rajasthan – INDIA
@@ -40,7 +40,7 @@ const Footer = () => {
                                     <br />
                                     <strong>Phone:</strong> +1 5589 55488 55
                                     <br />
-                                    <strong>Email:</strong> fuelophilia@gmail.com
+                                    <strong>Email:</strong> fuellophilia@gmail.com
                                     <br />
                                 </p>
                             </div>
@@ -125,7 +125,7 @@ const Footer = () => {
                     <div className="copyright">
                         © Copyright{" "}
                         <strong>
-                            <span>Fuelophilia</span>
+                            <span>fuellophilia</span>
                         </strong>
                         . All Rights Reserved
                     </div>

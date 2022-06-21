@@ -14,7 +14,7 @@ const Index = () => {
     return (
         <>
             {/* ======= Pricing Section ======= */}
-            <section id="pricing" className="pricing" style={{ marginTop: "150px" }}>
+            <section id="pricing" className="pricing" style={{ marginTop: "50px" }}>
                 <div className="container" data-aos="fade-up">
                     <div className="section-title">
                         <h2>{title}</h2>
@@ -24,7 +24,7 @@ const Index = () => {
                         {
                             HandleCart?.alldata?.map((item, index) => (
                                 <div className="card" style={{ width: '18rem' }}>
-                                    <img className="card-img-top" src="assets/img/petrol.jpg" alt="Card image cap" />
+                                    <img className="card-img-top" src={item.image} alt="Card image cap" style={{height: "200px", width: "200px"}}/>
                                     <div className="card-body">
                                         <h5 className="card-title"> {item.title}</h5>
                                         <sup>₹</sup>{item.price}<span>{item.per}</span>

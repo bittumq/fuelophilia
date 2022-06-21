@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux'
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { thanku } from '../../config/constants';
 
 import './Payment.css'
 
@@ -82,12 +83,16 @@ export const Payment = ({ changeroute }) => {
                             <p className="mb-2">Total(Incl. taxes)</p>
                             <p className="mb-2">₹{total}</p>
                           </div>
+
+                          <Link to={thanku}>
                           <button type="button" className="btn btn-info btn-block btn-lg">
                             <div className="d-flex justify-content-between">
                               <span>₹{total}</span>
                               <span>Checkout <i className="fas fa-long-arrow-alt-right ms-2" /></span>
                             </div>
                           </button>
+                          </Link>
+
                         </div>
                       </div>
                     </div>

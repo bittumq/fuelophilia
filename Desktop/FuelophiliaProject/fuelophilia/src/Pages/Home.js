@@ -2,6 +2,9 @@ import React from "react";
 import Banner from "../components/commonBanner/Common";
 import Pricing from "../components/Pricing/Index";
 import Aboutus from "./Aboutus";
+import Portfolio from "./Portfolio";
+import Services from "./Services";
+import Team from "./Team";
 const Home = () => {
   return (
     <div>
@@ -14,42 +17,42 @@ const Home = () => {
               <img
                 src="assets/img/clients/client-1.png"
                 className="img-fluid"
-                alt
+                alt=""
               />
             </div>
             <div className="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
               <img
                 src="assets/img/clients/client-2.png"
                 className="img-fluid"
-                alt
+                alt=""
               />
             </div>
             <div className="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
               <img
                 src="assets/img/clients/client-3.png"
                 className="img-fluid"
-                alt
+                alt=""
               />
             </div>
             <div className="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
               <img
                 src="assets/img/clients/client-4.png"
                 className="img-fluid"
-                alt
+                alt=""
               />
             </div>
             <div className="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
               <img
                 src="assets/img/clients/client-5.png"
                 className="img-fluid"
-                alt
+                alt=""
               />
             </div>
             <div className="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
               <img
                 src="assets/img/clients/client-6.png"
                 className="img-fluid"
-                alt
+                alt=""
               />
             </div>
           </div>
@@ -268,7 +271,7 @@ const Home = () => {
               <div className="skills-content">
                 <div className="progress">
                   <span className="skill">
-                    HTML <i className="val">100%</i>
+                    Petrol <i className="val">100%</i>
                   </span>
                   <div className="progress-bar-wrap">
                     <div
@@ -280,7 +283,7 @@ const Home = () => {
                     />
                   </div>
                 </div>
-                <div className="progress">
+                {/* <div className="progress">
                   <span className="skill">
                     CSS <i className="val">90%</i>
                   </span>
@@ -291,12 +294,13 @@ const Home = () => {
                       aria-valuenow={90}
                       aria-valuemin={0}
                       aria-valuemax={100}
-                    />
+                    > 
+                    </div>
                   </div>
-                </div>
+                </div> */}
                 <div className="progress">
                   <span className="skill">
-                    JavaScript <i className="val">75%</i>
+                    Diesel <i className="val">75%</i>
                   </span>
                   <div className="progress-bar-wrap">
                     <div
@@ -310,7 +314,7 @@ const Home = () => {
                 </div>
                 <div className="progress">
                   <span className="skill">
-                    Photoshop <i className="val">55%</i>
+                    CNG Gass <i className="val">55%</i>
                   </span>
                   <div className="progress-bar-wrap">
                     <div
@@ -319,7 +323,7 @@ const Home = () => {
                       aria-valuenow={55}
                       aria-valuemin={0}
                       aria-valuemax={100}
-                    />
+                    > </div>
                   </div>
                 </div>
               </div>
@@ -328,6 +332,14 @@ const Home = () => {
         </div>
       </section>
       {/* End Skills Section */}
+
+       {/* SERVICES */}
+      <Services />
+
+      {/* ======= Pricing Section ======= */}
+      <Pricing />
+
+      {/* End Pricing Section */}
 
       {/* ======= Cta Section ======= */}
       <section id="cta" className="cta">
@@ -353,10 +365,11 @@ const Home = () => {
       </section>
       {/* End Cta Section */}
 
-      {/* ======= Pricing Section ======= */}
-      <Pricing />
+      {/* Portfolio */}
+      < Portfolio />
 
-      {/* End Pricing Section */}
+      {/* TEAM */}
+      <Team />
 
       {/* ======= Frequently Asked Questions Section ======= */}
       <section id="faq" className="faq section-bg">
@@ -376,7 +389,7 @@ const Home = () => {
                   className="collapse"
                   data-bs-target="#faq-list-1"
                 >
-                  What is Fuelophilia?{" "}
+                  What is fuellophilia?{" "}
                   <i className="bx bx-chevron-down icon-show" />
                   <i className="bx bx-chevron-up icon-close" />
                 </a>
@@ -386,7 +399,7 @@ const Home = () => {
                   data-bs-parent=".faq-list"
                 >
                   <p>
-                    Fuelophilia is an online platform to provide doorstep
+                    fuellophilia is an online platform to provide doorstep
                     delivery of fuel in a safe, reliable, and efficient way. You
                     can place your order online and get fuel delivered at your
                     location in specialized Refuellers (FuelBuddy Tankers)
@@ -402,7 +415,7 @@ const Home = () => {
                   data-bs-target="#faq-list-2"
                   className="collapsed"
                 >
-                  Which areas are being served by Fuelophilia right now?{" "}
+                  Which areas are being served by fuellophilia right now?{" "}
                   <i className="bx bx-chevron-down icon-show" />
                   <i className="bx bx-chevron-up icon-close" />
                 </a>
@@ -426,7 +439,7 @@ const Home = () => {
                   data-bs-target="#faq-list-3"
                   className="collapsed"
                 >
-                  Where does Fuelophilia source its fuel from ?{" "}
+                  Where does fuellophilia source its fuel from ?{" "}
                   <i className="bx bx-chevron-down icon-show" />
                   <i className="bx bx-chevron-up icon-close" />
                 </a>
@@ -436,7 +449,7 @@ const Home = () => {
                   data-bs-parent=".faq-list"
                 >
                   <p>
-                    Fuelophilia sources fuel from authorized and selected
+                    fuellophilia sources fuel from authorized and selected
                     dealers of oil companies near your location. We follow a
                     strict quality assurance program to ensure every drop of
                     fuel is checked for quality before it gets loaded into our
@@ -453,7 +466,7 @@ const Home = () => {
                   data-bs-target="#faq-list-4"
                   className="collapsed"
                 >
-                  What are Fuelophilia's hours of operation ?{" "}
+                  What are fuellophilia's hours of operation ?{" "}
                   <i className="bx bx-chevron-down icon-show" />
                   <i className="bx bx-chevron-up icon-close" />
                 </a>

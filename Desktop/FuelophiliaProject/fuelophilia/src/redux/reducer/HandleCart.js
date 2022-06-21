@@ -1,8 +1,13 @@
+import petrol from '../../components/assests/img/petrol.jpg'
+import diesel from '../../components/assests/img/diesel.png'
+import cngImage from '../../components/assests/img/cngImage.jpg'
+
 
 function getLocal() {
     let getLoc = JSON.parse(localStorage.getItem("cart")) || []
     return getLoc;
 }
+
 
 const cart = {
     cartdata: getLocal(), alldata: [
@@ -12,7 +17,7 @@ const cart = {
             title: "Petrol",
             price: "120",
             per: "/liter",
-            image: "",
+            image: petrol,
             btnText: "Order"
         },
         {
@@ -20,7 +25,7 @@ const cart = {
             title: "Desiel",
             price: "100",
             per: "/liter",
-            image: "",
+            image: diesel,
             btnText: "Order"
         },
         {
@@ -28,7 +33,7 @@ const cart = {
             title: "CNG",
             price: "80",
             per: "/KG",
-            image: "",
+            image: cngImage,
             btnText: "Order"
         }
 

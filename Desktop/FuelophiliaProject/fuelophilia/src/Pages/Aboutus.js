@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
+import { learnmore } from '../config/constants';
 
 const Aboutus = () => {
     return (
@@ -13,41 +15,36 @@ const Aboutus = () => {
                     <div className="row content">
                         <div className="col-lg-6">
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua.
+                            Fuellophilia – On-Demand Fuel at Doorstep system with unique requirements according to preserve theirs potential consumer then put theirs leads to opportunities.
                             </p>
                             <ul>
                                 <li>
                                     <i className="ri-check-double-line" />{" "}
-                                    Ullamco laboris nisi ut aliquip ex ea
-                                    commodo consequat
+                                    For the better user experience.
                                 </li>
                                 <li>
                                     <i className="ri-check-double-line" />{" "}
-                                    Duis aute irure dolor in reprehenderit
-                                    in voluptate velit
+                                    Saves the time of user for finding their Petrol pump.
                                 </li>
                                 <li>
                                     <i className="ri-check-double-line" />{" "}
-                                    Ullamco laboris nisi ut aliquip ex ea
-                                    commodo consequat
+                                    For better user engagement.
+                                </li>
+                                <li>
+                                    <i className="ri-check-double-line" />{" "}
+                                    User save the time and cost.
                                 </li>
                             </ul>
                         </div>
                         <div className="col-lg-6 pt-4 pt-lg-0">
                             <p>
-                                Ullamco laboris nisi ut aliquip ex ea
-                                commodo consequat. Duis aute irure dolor in
-                                reprehenderit in voluptate velit esse cillum
-                                dolore eu fugiat nulla pariatur. Excepteur
-                                sint occaecat cupidatat non proident, sunt
-                                in culpa qui officia deserunt mollit anim id
-                                est laborum.
+                            On-demand fuel transport is a fresh, shortly increasing domain, disrupting the present-day commercial enterprise scene as much we know it. Because on the ease about makes use of or payable in accordance with a surely modern approach, the cellular gas delivery industry is embark for steady growth.
                             </p>
+                            <Link to={learnmore}>
                             <a href="#" className="btn-learn-more">
                                 Learn More
                             </a>
+                            </Link>
                         </div>
                     </div>
                 </div>
